@@ -1,0 +1,340 @@
+// https://app.thesimple.vn/doanmanh-lequynh
+:root {
+  --color-gray: gray;
+  --color-gray-2: #808080;
+  --color-green: green;
+  --color-black: #212529;
+  --color-pink: pink;
+  --color-main: #003835;
+  --color-white: #ffffff;
+}
+
+html {
+  background: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f7f7f7;
+  main {
+    background: var(--color-white);
+    margin: auto;
+    max-width: 600px;
+  }
+
+//   main {
+//     height: 100vh;
+//     scroll-snap-type: y mandatory;
+//     overflow-y: scroll;
+// }
+
+// section {
+//     height: 100vh;
+//     scroll-snap-align: start;
+//     font-size: 2em; /* Kích thước chữ lớn hơn cho dễ nhìn */
+// }
+  .container {
+    max-width: 600px;
+  }
+  .text-color-main {
+    color: var(--color-main);
+    color: red;
+  }
+  .title {
+  }
+  .information {
+  }
+
+  .photo-wapper {
+    position: relative;
+  }
+
+  .img-desc {
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .btn-photo-right,
+  .btn-photo-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    outline: none;
+    z-index: 999;
+    font-size: 1.6rem;
+    color: var(--color-gray);
+  }
+  .btn-photo-right {
+    right: 10px;
+  }
+  .btn-photo-left {
+    left: 10px;
+  }
+
+  .slick-slider-dots {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0 4px;
+        button {
+          background: var(--color-gray);
+          height: 4px;
+          width: 20px;
+          overflow: hidden;
+          color: var(--color-gray);
+          border: none;
+          border-radius: 4px;
+        }
+        &.slick-active {
+          button {
+            background: var(--color-green);
+            color: var(--color-green);
+          }
+        }
+      }
+    }
+  }
+
+  .crad-time-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .crad-time {
+    border: 1px solid var(--color-black);
+    border-radius: 10px;
+    width: 80px;
+    padding: 16px 5px;
+    box-shadow: 0 3px 3px #0003;
+    .time-down {
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+    .time-desc {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+  }
+  .time-down-action {
+    width: 50%;
+    padding: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    border: 1px solid var(--color-black);
+    font-size: 22px;
+  }
+
+  .img-line {
+    background-image: url("../img/papyrus.png");
+    height: 120px;
+  }
+
+  .feedback {
+  }
+  .feedback-crad-wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    .feedback-card {
+      cursor: pointer;
+      min-width: 150px;
+      padding: 20px 15px;
+      border: 1px solid var(--color-gray-2);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        font-weight: 500;
+        color: var(--color-gray-2);
+        font-size: 15px;
+      }
+      .feedback-card-img {
+        width: 60px;
+        height: 60px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .feedback-card.border {
+      border: 2px solid var(--color-main) !important;
+      span {
+        color: var(--color-main);
+      }
+    }
+  }
+  .form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    input,
+    select {
+      font-size: 18px;
+      padding: 0.8rem;
+    }
+  }
+  .card-ss {
+    cursor: pointer;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    .card-ss-img {
+      width: 60px;
+    }
+    .card-ss-desc {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-weight: 500;
+    }
+  }
+
+  .card-ss.border {
+    border: 2px solid var(--color-main) !important;
+  }
+
+  .btn-feedback {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    padding: 14px;
+    font-size: 22px;
+    border-radius: 5px;
+  }
+
+  .qr-code {
+    .container {
+      border-top: 1px solid #eee;
+    }
+    .qr-header {
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .qr-img {
+      padding: 20px 40px;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .map {
+    .container {
+      border-top: 1px solid #eee;
+    }
+  }
+  .contact-social {
+    .img-contact {
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .contact-phone-wrapper {
+      display: flex;
+    }
+    .contact-phone-card {
+      text-decoration: none;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.9rem;
+      span {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color: var(--color-main);
+      }
+      .contact-phone-card-icon {
+        color: var(--color-white);
+        background-color: var(--color-main);
+        width: 2.1rem;
+        height: 2.1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px var(--color-white), 0 0 0 5px var(--color-main);
+      }
+    }
+  }
+
+  .socical-wapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    .socical-card {
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      color: var(--color-white);
+      text-decoration: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.fb {
+        background-color: #3b5998ff;
+      }
+      &.instagram {
+        background-color: #CB2027ff;
+        i {
+          font-size: 18px;
+        }
+      }
+      &.mail {
+        background-color: #0F6CBD;
+      }
+      span {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .footer {
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
