@@ -81,3 +81,14 @@ nhaGai.addEventListener('click', function (e) {
         this.classList.toggle('border');
     }
 })
+
+
+nhaGai.addEventListener('change', function (e) {
+    if (this.classList.contains('border')) {
+        return
+    } else {
+        nhaTrai.classList.toggle('border');
+        this.classList.toggle('border');
+    }
+})
+
