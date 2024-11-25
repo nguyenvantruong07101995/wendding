@@ -73,7 +73,7 @@ nhaGai.addEventListener('click', function (e) {
 })
 
 
-nhaGai.addEventListener('change', function (e) {
+nhaGai.addEventListener('change123123', function (e) {
     if (this.classList.contains('border')) {
         return
     } else {
